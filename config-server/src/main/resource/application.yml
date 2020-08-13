@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master # label表示分支
+      server:
+        git:
+          uri: https://github.com/how2j/springcloudConfig/  # uri为git地址
+          searchPaths: respo  # searchPaths表示目录：
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8030
